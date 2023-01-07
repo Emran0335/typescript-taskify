@@ -31,7 +31,7 @@ const App = () => {
     let complete = completedTodos;
 
     if (source.droppableId === "todoListDrop") {
-      // from TodoList
+      // from TodoList component
       add = active[source.index];
       active.splice(source.index, 1);
     } else {
@@ -41,7 +41,6 @@ const App = () => {
     if (destination.droppableId === "todoListDrop") {
       // from TodoList
       // if(source.droppabled === 'todosRemove') also works
-
       active.splice(destination.index, 0, add);
     } else {
       complete.splice(destination.index, 0, add);
